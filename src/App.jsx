@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import './styles/legacy/index.css'
 import './styles/legacy/A.habitaciones.css'
 import './styles/legacy/B-restaurante.css'
@@ -26,13 +26,28 @@ const routes = {
   '/paginas/d-formulario.html': { component: BookingPage, title: 'Contacto & Reservas | Jardines del Cerro' },
 }
 
+function getCurrentPath() {
+  const baseUrl = import.meta.env.BASE_URL
+  const pathFromUrl = window.location.pathname.startsWith(baseUrl)
+    ? `/${window.location.pathname.slice(baseUrl.length)}`
+    : window.location.pathname
+
+  return (window.location.hash.slice(1) || pathFromUrl).replace(/\/$/, '').toLowerCase() || '/'
+}
+
 function App() {
-  const path = window.location.pathname.replace(/\/$/, '').toLowerCase() || '/'
+  const [path, setPath] = useState(getCurrentPath)
   const { component: Page, title } = routes[path] ?? routes['/']
 
   useEffect(() => {
     document.title = title
   }, [title])
+
+  useEffect(() => {
+    const updatePath = () => setPath(getCurrentPath())
+    window.addEventListener('hashchange', updatePath)
+    return () => window.removeEventListener('hashchange', updatePath)
+  }, [])
 
   return <Page />
 }

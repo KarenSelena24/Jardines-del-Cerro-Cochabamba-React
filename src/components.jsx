@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
-import { hotelAsset } from './hotelAsset.js'
+import { hotelAsset, sitePath } from './hotelAsset.js'
 
 const navigationItems = [
-  { href: '/habitaciones', label: 'Habitaciones & Suites' },
-  { href: '/restaurante', label: 'Restaurante & Bar' },
-  { href: '/actividades', label: 'Piscina, Sauna & Tours' },
-  { href: '/contacto', label: 'Contacto & Ubicación' },
+  { href: sitePath('/habitaciones'), label: 'Habitaciones & Suites' },
+  { href: sitePath('/restaurante'), label: 'Restaurante & Bar' },
+  { href: sitePath('/actividades'), label: 'Piscina, Sauna & Tours' },
+  { href: sitePath('/contacto'), label: 'Contacto & Ubicación' },
 ]
 
 export function SiteHeader({ home = false, children }) {
@@ -32,7 +32,7 @@ export function SiteHeader({ home = false, children }) {
     <header className={home ? 'header-container' : 'header-simple'}>
       <nav className="nav" aria-label="Navegación principal">
         <div className="nav__logo">
-          <a href="/" aria-label="Ir a la página de inicio de Jardines del Cerro">
+          <a href={sitePath('/')} aria-label="Ir a la página de inicio de Jardines del Cerro">
             <img src={hotelAsset('Artboard 1.png')} alt="Logotipo oficial de Hotel Jardines del Cerro" width="80" height="80" />
           </a>
         </div>
@@ -70,7 +70,7 @@ export function SiteHeader({ home = false, children }) {
           >
             <i className="fa-brands fa-whatsapp" aria-hidden="true" /> WhatsApp
           </a>
-          <a href="/contacto" className="nav__boton---mov2" aria-label="Ir al formulario de reserva">Reservar</a>
+          <a href={sitePath('/contacto')} className="nav__boton---mov2" aria-label="Ir al formulario de reserva">Reservar</a>
         </div>
       </nav>
       {children}
@@ -88,7 +88,7 @@ export function SiteFooter() {
           <i className="fa-solid fa-clock" aria-hidden="true" /> <strong>Recepción:</strong> Atención las 24 horas.<br />
           <i className="fa-solid fa-envelope" aria-hidden="true" /> <strong>Email:</strong> reservas@jardinesdelcerro.com
         </p>
-        <a href="/contacto" className="nav3__boton--reserva" aria-label="Ir al formulario para solicitar una reserva">Reservar Estancia</a>
+        <a href={sitePath('/contacto')} className="nav3__boton--reserva" aria-label="Ir al formulario para solicitar una reserva">Reservar Estancia</a>
       </section>
 
       <section className="nav3__redes">
@@ -116,7 +116,7 @@ export function AmenityIcon({ icon, children }) {
   )
 }
 
-export function CatalogCard({ prefix, image, alt, badge, title, description, action, href = '/contacto' }) {
+export function CatalogCard({ prefix, image, alt, badge, title, description, action, href = sitePath('/contacto') }) {
   return (
     <article className={prefix}>
       <div className={`${prefix}__media`}>

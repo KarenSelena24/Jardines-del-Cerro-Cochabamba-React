@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import BookingWidget from './BookingWidget.jsx'
-import { hotelAsset } from './hotelAsset.js'
+import { hotelAsset, sitePath } from './hotelAsset.js'
 import {
   AmenityIcon,
   CatalogCard,
@@ -103,7 +103,7 @@ const homeSections = [
       ['habitacion 3.jpg', 'Junior Suite con baño privado y amenities'],
     ],
     features: ['Vistas panorámicas a la montaña', 'TV Smart y WiFi de alta velocidad', 'Climatización frío/calor'],
-    href: '/habitaciones',
+    href: sitePath('/habitaciones'),
     link: 'Ver categorías y fotos',
   },
   {
@@ -117,7 +117,7 @@ const homeSections = [
       ['comida tres.png', 'Bar de cócteles y área de parrilla BBQ'],
     ],
     features: ['Desayuno buffet incluido', 'Opciones vegetarianas e ingredientes orgánicos', 'Cócteles de autor y zona BBQ en terraza'],
-    href: '/restaurante',
+    href: sitePath('/restaurante'),
     link: 'Ver menú y horarios',
     inverse: true,
   },
@@ -132,7 +132,7 @@ const homeSections = [
       ['a jardin.png', 'Proximidad al Jardín Botánico Martín Cárdenas'],
     ],
     features: ['Piscina exterior y área de solárium', 'Servicio de sauna para huéspedes', 'Ubicación estratégica cerca de atractivos turísticos'],
-    href: '/actividades',
+    href: sitePath('/actividades'),
     link: 'Ver servicios de relax',
   },
 ]
@@ -210,7 +210,7 @@ export function HomePage() {
               <AmenityIcon icon="fa-solid fa-clock">Recepción 24/7</AmenityIcon>
             </div>
             <div className="hero__actions">
-              <a href="/contacto" className="btn btn--primario" aria-label="Reservar estancia en Cochabamba">Ver Disponibilidad y Tarifas</a>
+              <a href={sitePath('/contacto')} className="btn btn--primario" aria-label="Reservar estancia en Cochabamba">Ver Disponibilidad y Tarifas</a>
               <a href="https://wa.me/59112345678?text=Hola,%20quisiera%20más%20información%20sobre%20el%20hotel" target="_blank" rel="noopener noreferrer" className="btn btn--secundario" aria-label="Contactar por WhatsApp">
                 <i className="fa-brands fa-whatsapp" aria-hidden="true" /> WhatsApp Directo
               </a>
@@ -223,7 +223,7 @@ export function HomePage() {
         <section className="seccion__ScrollFotos" aria-label="Galería fotográfica de nuestras instalaciones">
           <div className="seccion__ScrollFotos--header">
             <h2>Conoce Nuestras Instalaciones</h2>
-            <a href="/habitaciones" className="enlace-galeria">Ver galería completa <i className="fa-solid fa-arrow-right" aria-hidden="true" /></a>
+            <a href={sitePath('/habitaciones')} className="enlace-galeria">Ver galería completa <i className="fa-solid fa-arrow-right" aria-hidden="true" /></a>
           </div>
           <div className="seccion__ScrollFotos--track">
             {[
@@ -249,7 +249,7 @@ export function HomePage() {
           <h2>¿Listo para tu escapada a Cochabamba?</h2>
           <p>Garantiza el mejor precio reservando directamente con nosotros. Wifi gratis, desayuno buffet e impuestos incluidos.</p>
           <div className="banner-cta__botones">
-            <a href="/contacto" className="btn btn--primario">Consultar Disponibilidad</a>
+            <a href={sitePath('/contacto')} className="btn btn--primario">Consultar Disponibilidad</a>
             <a href="https://wa.me/59112345678?text=Deseo%20reservar%20una%20habitación" target="_blank" rel="noopener noreferrer" className="btn btn--whatsapp">
               <i className="fa-brands fa-whatsapp" aria-hidden="true" /> Reservar por WhatsApp
             </a>
@@ -286,7 +286,7 @@ function ExperienceFeature({ image, alt, badge, title, description, action = 'Co
         <span className="tarjeta-platillo__etiqueta">{badge}</span>
         <h2>{title}</h2>
         <p>{description}</p>
-        <a href="/contacto" className="seccion__gridparrafo--enlace">{action} <i className="fa-solid fa-arrow-right" aria-hidden="true" /></a>
+        <a href={sitePath('/contacto')} className="seccion__gridparrafo--enlace">{action} <i className="fa-solid fa-arrow-right" aria-hidden="true" /></a>
       </div>
     </article>
   )
