@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante & Bar | Hotel Jardines del Cerro</title>
+    
+    <!-- Metaetiquetas SEO -->
+    <meta name="description" content="Disfruta de la mejor gastronomía en Jardines del Cerro. Platos gourmet, pizzas a la leña, postres artesanales y desayunos buffet en Cochabamba.">
+    <meta name="keywords" content="Restaurante Hotel Cochabamba, Platos Gourmet, Pizzas a la leña, Desayuno Buffet Cochabamba, Gastronomía Cochabamba">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:title" content="Restaurante & Bar – Jardines del Cerro Hotel Boutique">
+    <meta property="og:description" content="Una experiencia culinaria única que combina ingredientes locales, sazón artesanal y una vista inolvidable.">
+    <meta property="og:image" content="../IMAGENES/Artboard 1.png">
+    <meta property="og:type" content="website">
+
+    <!-- Hojas de estilo general y propia -->
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="B-restaurante.css">
+    
+    <!-- Fuentes e Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Alatsi&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Cabecera Simple de Subpáginas -->
+    <header class="header-simple">
+      <nav class="nav" aria-label="Navegación principal">
+        <div class="nav__logo">
+          <a href="../Index.html" aria-label="Volver a la página de inicio">
+            <img src="../IMAGENES/Artboard 1.png" alt="Logotipo oficial de Hotel Jardines del Cerro" width="80" height="80">
+          </a>
+        </div>
+
+        <div class="nav__acciones">
+          <details class="nav__menu" id="menuDetails">
+            <summary class="nav__boton---mov1" aria-haspopup="true" aria-label="Abrir menú de navegación">Menú</summary>
+            <div class="nav__dialogo--contenedor" role="region" aria-label="Opciones del menú">
+              <ul class="nav__dialogo--lista">
+                <li><a href="A-habitaciones.html">Habitaciones & Suites</a></li>
+                <li><a href="B-restaurante.html">Restaurante & Bar</a></li>
+                <li><a href="C-actividades.html">Piscina, Sauna & Tours</a></li>
+                <li><a href="D-formulario.html">Contacto & Ubicación</a></li>
+              </ul>
+            </div>
+          </details>
+
+          <a href="https://wa.me/59112345678?text=Hola,%20quisiera%20reservar%20una%20mesa" target="_blank" rel="noopener noreferrer" class="btn--whatsapp-header" aria-label="Consultar por WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+          </a>
+          <a href="D-formulario.html" class="nav__boton---mov2" aria-label="Ir al formulario de reserva">Reservar</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="contenedor-restaurante">
+      <section class="restaurante-seccion" aria-labelledby="restaurante-titulo">
+        
+        <!-- Encabezado de la Sección -->
+        <div class="restaurante__encabezado">
+          <p class="restaurante__tagline">GASTRONOMÍA & SABORES</p>
+          <h1 id="restaurante-titulo" class="restaurante__titulo-principal">Nuestro Restaurante</h1>
+          <p class="restaurante__subtitulo">Una experiencia culinaria única que combina ingredientes locales, sazón artesanal y una vista inolvidable.</p>
+        </div>
+        
+        <!-- Rejilla del Menú Gastronómico -->
+        <div class="restaurante__grid" aria-label="Menú de especialidades del restaurante">
+          
+          <!-- Tarjeta 1 -->
+          <article class="tarjeta-platillo">
+            <div class="tarjeta-platillo__media">
+              <img src="../IMAGENES/comida uno.png" alt="Plato especial gourmet elaborado con ingredientes orgánicos" class="tarjeta-platillo__img" loading="lazy">
+              <span class="tarjeta-platillo__etiqueta">Especialidad</span>
+            </div>
+            <div class="tarjeta-platillo__cuerpo">
+              <h2 class="tarjeta-platillo__titulo">Platos Gourmet</h2>
+              <p class="tarjeta-platillo__texto">Preparaciones exclusivas del chef con carnes seleccionadas e ingredientes frescos de la región.</p>
+              <a href="D-formulario.html" class="tarjeta-platillo__btn">Reservar Mesa</a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 2 -->
+          <article class="tarjeta-platillo">
+            <div class="tarjeta-platillo__media">
+              <img src="../IMAGENES/foto pizza.png" alt="Pizza artesanal recién horneada a la leña" class="tarjeta-platillo__img" loading="lazy">
+              <span class="tarjeta-platillo__etiqueta">Artesanal</span>
+            </div>
+            <div class="tarjeta-platillo__cuerpo">
+              <h2 class="tarjeta-platillo__titulo">Pizzas a la Leña</h2>
+              <p class="tarjeta-platillo__texto">Masas de fermentación lenta, queso fundido de primera calidad e ingredientes tradicionales.</p>
+              <a href="D-formulario.html" class="tarjeta-platillo__btn">Reservar Mesa</a>
+            </div>
+          </article>
+
+          <!-- Tarjeta 3 -->
+          <article class="tarjeta-platillo">
+            <div class="tarjeta-platillo__media">
+              <img src="../IMAGENES/foto helado.png" alt="Helados y postres artesanales de la casa" class="tarjeta-platillo__img" loading="lazy">
+              <span class="tarjeta-platillo__etiqueta">Postres</span>
+            </div>
+            <div class="tarjeta-platillo__cuerpo">
+              <h2 class="tarjeta-platillo__titulo">Helados & Dulces</h2>
+              <p class="tarjeta-platillo__texto">Postres de autor y helados elaborados en casa para cerrar tu cena con el toque dulce perfecto.</p>
+              <a href="D-formulario.html" class="tarjeta-platillo__btn">Reservar Mesa</a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- Pie de página unificado -->
+    <footer class="nav3">
+        <section class="nav3__contacto">
+            <h3>Atención e Informes</h3>
+            <p class="footer__direccion">
+              <i class="fa-solid fa-location-dot"></i> <strong>Dirección:</strong> Urbanización Irlandés, Pasaje Jacaranda #30, Cochabamba, Bolivia.<br>
+              <i class="fa-solid fa-clock"></i> <strong>Recepción:</strong> Atención las 24 horas.<br>
+              <i class="fa-solid fa-envelope"></i> <strong>Email:</strong> reservas@jardinesdelcerro.com
+            </p>
+            <a href="D-formulario.html" class="nav3__boton--reserva">
+              Reservar Estancia
+            </a>
+        </section>
+
+        <section class="nav3__redes">
+            <img class="nav3__redes--img" src="../IMAGENES/Artboard 1.png" alt="Logotipo de Jardines del Cerro" width="100" height="100">
+            <h2>Jardines del Cerro</h2>
+            <p class="footer__subtitulo">Hotel Boutique & Spa · Cochabamba</p>
+            
+            <div class="nav3__social-icons">
+              <a href="tel:+59112345678" aria-label="Llamar al hotel"><i class="fa-solid fa-square-phone" aria-hidden="true"></i></a>
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook oficial"><i class="fa-brands fa-square-facebook" aria-hidden="true"></i></a>
+              <a href="https://wa.me/59112345678" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp del hotel"><i class="fa-brands fa-square-whatsapp" aria-hidden="true"></i></a>
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram oficial"><i class="fa-brands fa-square-instagram" aria-hidden="true"></i></a>
+            </div>
+            
+            <p class="copyright">&copy; 2026 Jardines del Cerro Hotel Boutique. Todos los derechos reservados.</p>
+        </section>
+    </footer>
+
+    <!-- Cierre del Menú Desplegable -->
+    <script>
+      const menu = document.getElementById('menuDetails');
+      document.addEventListener('click', (event) => {
+        if (menu && !menu.contains(event.target)) {
+          menu.removeAttribute('open');
+        }
+      });
+    </script>
+</body>
+</html>

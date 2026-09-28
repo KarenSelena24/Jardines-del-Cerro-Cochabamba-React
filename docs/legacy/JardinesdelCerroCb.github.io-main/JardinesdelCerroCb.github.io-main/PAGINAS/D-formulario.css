@@ -1,0 +1,485 @@
+/* ==========================================================
+   1. RESET Y FONDO GLOBAL UNIFICADO
+   ========================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #070926;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Open Sans', system-ui, -apple-system, sans-serif;
+  color: #ffffff;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+:focus-visible {
+  outline: 3px solid #ffcc00;
+  outline-offset: 3px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main {
+  flex: 1;
+  width: 100%;
+  background-color: #070926;
+}
+
+header, footer {
+  width: 100%;
+  background-color: #070926;
+}
+
+/* ==========================================================
+   2. NAVEGACIÓN Y CABECERA GLOBAL
+   ========================================================== */
+.header-simple {
+  border-bottom: 1px solid rgba(226, 187, 240, 0.15);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav__acciones {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav__menu {
+  position: relative;
+}
+
+.nav__boton---mov1,
+.nav__boton---mov2 {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #73168c; 
+  color: #ffffff;
+  border: none; 
+  padding: 10px 22px; 
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer; 
+  border-radius: 10px;
+  transition: background-color 0.25s ease;
+}
+
+.nav__boton---mov1:hover,
+.nav__boton---mov2:hover {
+  background-color: #520f66;
+}
+
+.nav__dialogo--contenedor {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background-color: #ffffff;
+  width: 220px;
+  padding: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  z-index: 200;
+}
+
+.nav__dialogo--lista {
+  list-style: none;
+}
+
+.nav__dialogo--lista li a {
+  color: #73168c;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  padding: 10px 20px;
+  min-height: 44px;
+}
+
+.nav__dialogo--lista li a:hover {
+  background-color: #f3e0fa;
+}
+
+/* ==========================================================
+   3. ESTILOS DE FORMULARIO
+   ========================================================== */
+.contenedor-formulario {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 4rem 2rem;
+}
+
+.formulario__encabezado {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.formulario__tagline {
+  color: #e2bbf0;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.formulario__titulo-principal {
+  font-family: 'Alatsi', sans-serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.formulario__subtitulo {
+  color: #d1d5db;
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.formulario__card {
+  background: rgba(18, 14, 38, 0.75);
+  border: 1px solid rgba(226, 187, 240, 0.2);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.formulario__grupo {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.formulario__leyenda {
+  font-family: 'Alatsi', sans-serif;
+  font-size: 1.4rem;
+  color: #e2bbf0;
+  margin-bottom: 1.5rem;
+  padding: 0;
+}
+
+.formulario__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.formulario__grid--detalles {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed rgba(226, 187, 240, 0.2);
+  animation: despliegueSuave 0.35s ease-out forwards;
+}
+
+@keyframes despliegueSuave {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.campo__label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.campo__input {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 14px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(226, 187, 240, 0.3);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.campo__select option {
+  background-color: #070926;
+  color: #ffffff;
+}
+
+.campo__input:focus {
+  outline: none;
+  border-color: #73168c;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 3px rgba(115, 22, 140, 0.3);
+}
+
+.campo__input::placeholder {
+  color: #9ca3af;
+}
+
+.formulario__acciones {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(226, 187, 240, 0.15);
+}
+
+.btn {
+  min-height: 48px;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-family: 'Alatsi', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn--primario {
+  background-color: #73168c;
+  color: #ffffff;
+}
+
+.btn--primario:hover {
+  background-color: #520f66;
+}
+
+.btn--secundario {
+  background-color: transparent;
+  color: #d1d5db;
+  border: 1px solid rgba(226, 187, 240, 0.4);
+}
+
+.btn--secundario:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+/* ==========================================================
+   4. VENTANA EMERGENTE (MODAL DE SIMULACIÓN DE ENVÍO)
+   ========================================================== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(7, 9, 38, 0.85);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1.5rem;
+}
+
+.modal-card {
+  background: #120e26;
+  border: 1px solid #73168c;
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  animation: modalEntrada 0.3s ease-out forwards;
+}
+
+@keyframes modalEntrada {
+  from {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal__titulo {
+  font-family: 'Alatsi', sans-serif;
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+}
+
+.modal__texto {
+  color: #d1d5db;
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Indicador Animado (Cargando) */
+.spinner {
+  width: 54px;
+  height: 54px;
+  border: 4px solid rgba(226, 187, 240, 0.2);
+  border-top: 4px solid #73168c;
+  border-radius: 50%;
+  animation: girar 0.9s linear infinite;
+  margin: 0 auto 1.5rem auto;
+}
+
+@keyframes girar {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Icono de Éxito */
+.modal__icono-exito {
+  font-size: 3.8rem;
+  color: #22c55e;
+  margin-bottom: 1rem;
+}
+
+/* ==========================================================
+   5. PIE DE PÁGINA (FOOTER)
+   ========================================================== */
+.nav3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  gap: 2rem; 
+  padding: 3rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.nav3__contacto h3 {
+  font-family: 'Alatsi', sans-serif;
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.nav3__contacto p {
+  color: #d1d5db;
+  max-width: 480px;
+}
+
+.nav3__boton--reserva {
+  min-height: 44px;
+  background-color: #73168c;
+  color: #ffffff;
+  border: none;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.nav3__boton--reserva:hover {
+  background-color: #520f66;
+}
+
+.nav3__redes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.nav3__redes h2 {
+  font-family: 'Alatsi', sans-serif;
+}
+
+.nav3__social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.nav3__social-icons a {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav3__social-icons i {
+  font-size: 2rem;
+  color: #ffffff;
+  transition: color 0.2s ease;
+}
+
+.nav3__social-icons i:hover {
+  color: #e2bbf0;
+}
+
+/* ==========================================================
+   6. RESPONSIVE / ADAPTABILIDAD
+   ========================================================== */
+@media (max-width: 768px) {
+  .contenedor-formulario {
+    padding: 1.8rem 1rem 3rem 1rem;
+  }
+
+  .formulario__card {
+    padding: 1.5rem;
+  }
+
+  .formulario__grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .formulario__acciones {
+    flex-direction: column-reverse;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .nav3 {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .nav3__contacto p {
+    margin: 0 auto;
+  }
+
+  .nav3__redes {
+    align-items: center;
+  }
+}

@@ -1,0 +1,160 @@
+.page-home .nav3 {
+  align-items: start;
+  border-top: 1px solid rgba(226, 187, 240, 0.15);
+}
+
+.page-home .hero__actions .btn--secundario {
+  background-color: #25d366;
+  color: #fff;
+  border: 0;
+}
+
+.page-home .hero__actions .btn--secundario:hover {
+  background-color: #1da851;
+}
+
+.tabbed-panel {
+  margin-top: 2.5rem;
+}
+
+.tabbed-panel__tabs {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  border-bottom: 1px solid rgba(226, 187, 240, 0.2);
+}
+
+.tabbed-panel__tab {
+  flex: 0 0 auto;
+  min-height: 44px;
+  padding: 0.7rem 1.1rem;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  border-radius: 8px 8px 0 0;
+  color: #d1d5db;
+  background: transparent;
+  cursor: pointer;
+}
+
+.tabbed-panel__tab[aria-selected='true'] {
+  color: #fff;
+  border-bottom-color: #e2bbf0;
+  background: rgba(115, 22, 140, 0.22);
+}
+
+.tabbed-panel__content {
+  padding-top: 1.5rem;
+}
+
+.experience-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(226, 187, 240, 0.2);
+  border-radius: 12px;
+  background: rgba(18, 14, 38, 0.65);
+}
+
+.experience-feature > img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.experience-feature > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.experience-feature .tarjeta-platillo__etiqueta {
+  position: static;
+  display: inline-flex;
+}
+
+.experience-feature h2 {
+  font-family: 'Alatsi', sans-serif;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.experience-feature p {
+  color: #d1d5db;
+}
+
+.subpage-heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.subpage-heading__tagline {
+  color: #e2bbf0;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.subpage-heading__title {
+  font-family: 'Alatsi', sans-serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.subpage-heading__description {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #d1d5db;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 540px) {
+  .nav {
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .nav__logo img {
+    width: 56px;
+    height: auto;
+  }
+
+  .nav__acciones {
+    flex: 1;
+    min-width: 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.4rem;
+  }
+
+  .nav__boton---mov1,
+  .nav__boton---mov2 {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .btn--whatsapp-header {
+    padding: 6px 9px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience-feature {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1rem;
+  }
+
+  .tabbed-panel__tabs {
+    margin-inline: -1rem;
+    padding-inline: 1rem;
+  }
+}
